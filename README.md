@@ -1,4 +1,5 @@
-# Angular4-BasicComponents
+# Angular4-The Basics
+# Udemy Course
 
 # MyFirstApp
 
