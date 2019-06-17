@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 // has to import the ServerComponent before addin it
+// so TypeScript will know it
 import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 // this is the NgModule decorator
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,
