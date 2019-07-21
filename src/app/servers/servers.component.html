@@ -28,3 +28,11 @@ to change something at runtime -->
 <p>{{ allowNewServer }}</p> <!-- string interpolation -->
 <p [innerText]="allowNewServer"></p> <!-- property binding -->
 
+
+<h5> DataBinding </h5>
+<h5> Event Binding </h5>
+<p>{{ serverCreationStatus }}</p>
+
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
