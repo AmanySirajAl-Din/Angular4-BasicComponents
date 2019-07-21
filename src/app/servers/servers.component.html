@@ -10,7 +10,9 @@
 
 
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+
 <!--[ ] indicate to Angular the we're using property binding-->
+
 <!--[disabled]="!allowNewServer" ==> that means
 add 'disabled' property to the button when allowNewServer == false
 else remove this property 
@@ -19,4 +21,10 @@ So, if allowNewServer changed that will update dynamically -->
 <!-- that's one of the main reasons why we use Angular 
 cause it makes it easy to interact with the DOM 
 to change something at runtime -->
+
+
+<!-- string interpolation vs property binding -->
+
+<p>{{ allowNewServer }}</p> <!-- string interpolation -->
+<p [innerText]="allowNewServer"></p> <!-- property binding -->
 
