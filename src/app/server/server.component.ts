@@ -28,5 +28,15 @@ import { Component } from '@angular/core';
  
 
  export class ServerComponent {
+     //these data could take them for ex by http request
+     /*serverId = 10;
+     serverStatus = 'offline';*/
      
+     // can assign the type too
+     serverId: number = 10;
+     serverStatus: string = 'offline';
+     
+     getserverStatus(){
+         return this.serverStatus;
+     }
  }
