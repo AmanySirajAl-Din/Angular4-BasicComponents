@@ -2,6 +2,21 @@
   servers works!
 </p>
 
-<app-server></app-server>
-<app-server></app-server>
+<!--<app-server></app-server>
+<app-server></app-server>-->
+
+<h5> DataBinding </h5>
+<h5> Property Binding </h5>
+
+
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!--[ ] indicate to Angular the we're using property binding-->
+<!--[disabled]="!allowNewServer" ==> that means
+add 'disabled' property to the button when allowNewServer == false
+else remove this property 
+So, if allowNewServer changed that will update dynamically -->
+
+<!-- that's one of the main reasons why we use Angular 
+cause it makes it easy to interact with the DOM 
+to change something at runtime -->
 
