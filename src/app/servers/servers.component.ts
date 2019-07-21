@@ -28,7 +28,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
     allowNewServer = false;
     serverCreationStatus = "No server was created";
-
+    serverName = '';
   constructor() {
     setTimeout(() => {
         this.allowNewServer = true;
@@ -47,5 +47,17 @@ export class ServersComponent implements OnInit {
             x[i].style.color = "red";
         }
     }
-
+    
+    onUpdateServerName(event: Event){
+        console.log(event);
+        this.serverName = event.target.value;
+        this.serverName = (<HTMLInputElement>event.target).value;
+        console.log(this.serverName);
+        
+        /*(<HTMLInputElement>event.target)
+         explicit casting
+        this just to inform TypeScript that 
+         we know that the type of the HTML element of this event will be HTMLInputElement 
+         cause target is off type*/
+    }
 }

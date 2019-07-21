@@ -33,6 +33,19 @@ to change something at runtime -->
 <h5> Event Binding </h5>
 <p>{{ serverCreationStatus }}</p>
 
+<h5>Passing and Using Data with Event Binding</h5>
+<label>Server Name</label>
+<input
+    type = "text"
+    class= "form-control" 
+    (input)="onUpdateServerName($event)">
+    
+<p>{{ serverName }}</p>
+    
+   <!-- $event is reserved var name 
+   to use in the template when using databinding
+   ==> it's the data emitted with that event -->
+
 <button class="btn btn-primary" 
 [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
